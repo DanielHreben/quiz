@@ -22,7 +22,8 @@
     "react": "*",
     "react-classset": "*",
     "webpack": "*",
-    "bower": "*"
+    "bower": "*",
+    "bootstrap": "*"
   },
   "devDependencies": {
     "css-loader": "*",

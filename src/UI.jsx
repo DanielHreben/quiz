@@ -8,6 +8,7 @@ var React = require('react');
 var _     = require('lodash');
 
 require('./UI.less');
+require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
 var questions = require('./questions.json');
 
@@ -57,14 +58,16 @@ var UI = React.createClass({
         var question = questions[this.state.currentQuestion];
         var isQuizFinished = this.state.currentQuestion == questions.length-1;
 
-        var answersNode = question.answers.map( (answer,i) => <button onClick={this._answerQuestion.bind(this,i)}>{answer}</button>);
+        var answersNode = question.answers.map( (answer,i) => <button onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
 
         var questionNode = (
             <div className='question'>
                 <div className='text'>
                     {question.text}
                 </div>
-                {answersNode}
+                <div className='answers'>
+                    {answersNode}
+                </div>
             </div>
         );
 
