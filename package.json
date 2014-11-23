@@ -11,6 +11,7 @@
   "scripts": {
     "build": "webpack -p",
     "start": "webpack -d --watch --colors",
+    "postinstall": "bower install",
     "devserver": "webpack-dev-server --debug --devtool eval-source-map --output-pathinfo --watch --colors --inline --hot --content-base public --port 8090"
   },
   "dependencies": {
@@ -19,7 +20,9 @@
     "pubsub-js": "*",
     "q": "*",
     "react": "*",
-    "react-classset": "*"
+    "react-classset": "*",
+    "webpack": "*",
+    "bower": "*"
   },
   "devDependencies": {
     "css-loader": "*",
@@ -33,7 +36,6 @@
     "style-loader": "*",
     "traceur-loader": "*",
     "url-loader": "*",
-    "webpack": "*",
     "webpack-dev-server": "*",
     "lodash": "*",
     "font-awesome": "*",
