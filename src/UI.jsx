@@ -21,20 +21,20 @@ var UI = React.createClass({
 
     getInitialState() {
         return {
-            currentQuestion: 0
+            currentQuestion: 1
         };
     },
 
     _getNextQuestion() {
-        if (this.state.currentQuestion < questions.length-1) {
+        if (this.state.currentQuestion < questions.length) {
             this.setState({
-                currentQuestion: this.state.currentQuestion + 1
+                currentQuestion: this.state.currentQuestion+1
             });
         }
     },
 
     _answerQuestion(number) {
-        var points = questions[this.state.currentQuestion].answers[number].points;
+        var points = questions[this.state.currentQuestion-1].answers[number].points;
 
         for ( var result in points ) {
             if (results[ result ] === undefined) {
@@ -45,21 +45,22 @@ var UI = React.createClass({
         this._getNextQuestion();
     },
 
-    render() {
-        console.log('currentQuestion',this.state.currentQuestion);
-        var question = questions[this.state.currentQuestion];
-        var isQuizFinished = this.state.currentQuestion == questions.length-1;
+    _startNewQuiz() {
+        this.setState({
+            currentQuestion: 1
+        });
+    },
 
-        var answersNode = question.answers.map( (answer,i) => <button onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
+    render() {
+        var question = questions[this.state.currentQuestion-1];
+        var isQuizFinished = this.state.currentQuestion == questions.length;
+
+        var answersNode = question.answers.map( (answer,i) => <button className='btn btn-default btn-lg btn-block' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
 
         var questionNode = (
             <div className='question'>
-                <div className='text'>
-                    {question.text}
-                </div>
-                <div className='answers'>
-                    {answersNode}
-                </div>
+                <h2>{this.state.currentQuestion}. {question.text}</h2>
+                {answersNode}
             </div>
         );
 
@@ -69,13 +70,27 @@ var UI = React.createClass({
             return 0;
         });
 
-        console.log('topResults', topResults );
-
-        var resultsNode = resultsNames[ topResults[0] ];
+        var resultsNode = <h2>Your result is <u>{resultsNames[ topResults[0] ]}</u></h2>;
 
         return (
             <div className="UI">
-                {isQuizFinished ? resultsNode : questionNode}
+                <nav className="navbar navbar-default navbar-static-top" role="navigation">
+                    <div className="container">
+                        <div className="navbar-header">
+                            <a className="navbar-brand" href="#">Quiz</a>
+                        </div>
+                        <div className="navbar-collapse collapse">
+                            <ul className="nav navbar-nav">
+                                <li><a onClick={this._startNewQuiz}>Start</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div className="container">
+                    <div className="jumbotron">
+                        {isQuizFinished ? resultsNode : questionNode}
+                    </div>
+                </div>
             </div>
         );
     }
