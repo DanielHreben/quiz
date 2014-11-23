@@ -80,7 +80,7 @@ var UI = React.createClass({
         var resultsNode = (
             <div>
                 <h2>Your result is <u>{resultsNames[ topResults[0] ]}</u></h2>
-                <div className={'pic-'+topResults[0]} />
+                <img src={'static/img/'+topResults[0]+'.png'} />
             </div>
         );
 
