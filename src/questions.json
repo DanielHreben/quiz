@@ -1,0 +1,73 @@
+[{
+    "text": "Do you like boolshit?",
+    "answers": [{
+        "text":   "Yeah! I like it!",
+        "points": {
+            "citroen":  20,
+            "hyundai":   10,
+            "mercedes": 0
+        }
+    }, {
+        "text": "Sometimes I like shit, sometimes I like bulls",
+        "points": {
+            "citroen":  10,
+            "hyundai":   0,
+            "mercedes": 10
+        }
+    }, {
+        "text": "No!",
+        "points": {
+            "citroen":  -5,
+            "hyundai":   0,
+            "mercedes": 10
+        }
+    }]
+}, {
+    "text": "How about putin?",
+    "answers": [{
+        "text": "Lalalalalalalala!",
+        "points": {
+            "citroen":  0,
+            "hyundai":   10,
+            "mercedes": 10
+        }
+    }, {
+        "text": "Huilo!",
+        "points": {
+            "citroen":  0,
+            "hyundai":   10,
+            "mercedes": 15
+        }
+    }, {
+        "text": "President of the world!",
+        "points": {
+            "citroen":  40,
+            "hyundai":   0,
+            "mercedes": 0
+        }
+    }, {
+        "text": "WTF?",
+        "points": {
+            "citroen":  0,
+            "hyundai":   0,
+            "mercedes": 0
+        }
+    }]
+}, {
+    "text": "How mach 9000+1?",
+    "answers": [{
+        "text": "9001",
+        "points": {
+            "citroen":  0,
+            "hyundai":   0,
+            "mercedes": 0
+        }
+    }, {
+        "text": "Over 9000!",
+        "points": {
+            "citroen":  0,
+            "hyundai":   10,
+            "mercedes": 0
+        }
+    }]
+}]
