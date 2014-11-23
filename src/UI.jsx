@@ -5,7 +5,6 @@
 'use strict';
 
 var React = require('react');
-// var $     = require('jquery');
 
 require('./UI.less');
 
