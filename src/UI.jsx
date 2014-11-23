@@ -5,7 +5,6 @@
 'use strict';
 
 var React = require('react');
-var _     = require('lodash');
 
 require('./UI.less');
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
@@ -26,7 +25,7 @@ var UI = React.createClass({
     },
 
     _getNextQuestion() {
-        if (this.state.currentQuestion < questions.length) {
+        if (this.state.currentQuestion <= questions.length) {
             this.setState({
                 currentQuestion: this.state.currentQuestion+1
             });
@@ -52,21 +51,27 @@ var UI = React.createClass({
     },
 
     render() {
-        var question = questions[this.state.currentQuestion-1];
-        var isQuizFinished = this.state.currentQuestion == questions.length;
+        var isQuizFinished = this.state.currentQuestion > questions.length;
 
-        var answersNode = question.answers.map( (answer,i) => <button className='btn btn-default btn-lg btn-block' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
+        var answersNode = '';
+        var questionNode = '';
 
-        var questionNode = (
-            <div className='question'>
-                <h2>{this.state.currentQuestion}. {question.text}</h2>
-                {answersNode}
-            </div>
-        );
+        if (!isQuizFinished) {
+            var question = questions[this.state.currentQuestion-1];
+
+            answersNode = question.answers.map( (answer,i) => <button className='btn btn-default btn-lg btn-block' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
+
+            questionNode = (
+                <div className='question'>
+                    <h2>{this.state.currentQuestion}. {question.text}</h2>
+                    {answersNode}
+                </div>
+            );
+        }
 
         var topResults = Object.keys(results).sort(function(a, b) {
-            if (results[a] > results[b]) return  1;
-            if (results[a] < results[b]) return -1;
+            if (results[a] > results[b]) return -1;
+            if (results[a] < results[b]) return 1;
             return 0;
         });
 
