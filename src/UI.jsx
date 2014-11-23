@@ -10,19 +10,9 @@ var _     = require('lodash');
 require('./UI.less');
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
-var questions = require('./questions.json');
-
-var cars = {
-    citroen:  0,
-    hyundai:   0,
-    mercedes: 0,
-};
-
-var carName = {
-    citroen: 'Citroen',
-    hyundai: 'Hyundai',
-    mercedes: 'Mercedes'
-};
+var questions    = require('./questions.json');
+var resultsNames = require('./resultsNames.json');
+var results      = {};
 
 var UI = React.createClass({
     componentDidMount() {
@@ -46,10 +36,12 @@ var UI = React.createClass({
     _answerQuestion(number) {
         var points = questions[this.state.currentQuestion].answers[number].points;
 
-        for ( var car in points ) {
-            cars[ car ] += points[ car ];
+        for ( var result in points ) {
+            if (results[ result ] === undefined) {
+                results[ result ] = 0;
+            }
+            results[ result ] += points[ result ];
         }
-        console.log(number,cars);
         this._getNextQuestion();
     },
 
@@ -71,16 +63,15 @@ var UI = React.createClass({
             </div>
         );
 
-        var max = _.max(cars);
+        var topResults = Object.keys(results).sort(function(a, b) {
+            if (results[a] > results[b]) return  1;
+            if (results[a] < results[b]) return -1;
+            return 0;
+        });
 
-        console.log('max', max );
+        console.log('topResults', topResults );
 
-        var maxObject = '';
-        for (var key in cars) {
-            if (cars[key] == max) maxObject = key;
-        }
-
-        var resultsNode = carName[maxObject];
+        var resultsNode = resultsNames[ topResults[0] ];
 
         return (
             <div className="UI">
