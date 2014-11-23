@@ -5,14 +5,11 @@
 'use strict';
 
 var React = require('react');
-var $     = require('jquery');
-// var mui = require('material-ui');
-// var PaperButton = mui.PaperButton;
 
 require('./UI.less');
 
 var UI = React.createClass({
-    componentDidMount: function() {
+    componentDidMount() {
 
     },
 
