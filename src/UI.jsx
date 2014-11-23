@@ -31,49 +31,49 @@ var UI = React.createClass({
 
     getInitialState() {
         return {
-            currentQuestion: 0
+            currentQuestion: 1
         };
     },
 
     _getNextQuestion() {
-        if (this.state.currentQuestion < questions.length-1) {
+        if (this.state.currentQuestion < questions.length) {
             this.setState({
-                currentQuestion: this.state.currentQuestion + 1
+                currentQuestion: this.state.currentQuestion+1
             });
         }
     },
 
     _answerQuestion(number) {
-        var points = questions[this.state.currentQuestion].answers[number].points;
+        var points = questions[this.state.currentQuestion-1].answers[number].points;
 
         for ( var car in points ) {
             cars[ car ] += points[ car ];
         }
-        console.log(number,cars);
+
         this._getNextQuestion();
     },
 
-    render() {
-        console.log('currentQuestion',this.state.currentQuestion);
-        var question = questions[this.state.currentQuestion];
-        var isQuizFinished = this.state.currentQuestion == questions.length-1;
+    _startNewQuiz() {
+        this.setState({
+            currentQuestion: 1
+        });
+    },
 
-        var answersNode = question.answers.map( (answer,i) => <button className='btn btn-default' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
+    render() {
+        var question = questions[this.state.currentQuestion-1];
+        var isQuizFinished = this.state.currentQuestion == questions.length;
+
+        var answersNode = question.answers.map( (answer,i) => <button className='btn btn-default btn-lg btn-block' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
 
         var questionNode = (
             <div className='question'>
-                <h2>
-                    {question.text}
-                </h2>
-                <div className='answers'>
-                    {answersNode}
-                </div>
+                <h2>{this.state.currentQuestion}. {question.text}</h2>
+                {answersNode}
             </div>
         );
 
         var max = _.max(cars);
 
-        console.log('max', max );
 
         var maxObject = '';
         for (var key in cars) {
@@ -88,6 +88,11 @@ var UI = React.createClass({
                     <div className="container">
                         <div className="navbar-header">
                             <a className="navbar-brand" href="#">Quiz</a>
+                        </div>
+                        <div className="navbar-collapse collapse">
+                            <ul className="nav navbar-nav">
+                                <li><a onClick={this._startNewQuiz}>Start</a></li>
+                            </ul>
                         </div>
                     </div>
                 </nav>
