@@ -9,8 +9,8 @@ var React = require('react');
 require('./UI.less');
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
-var questions    = require('./questions.json');
-var resultsNames = require('./resultsNames.json');
+var questions    = require('./data/questions.json');
+var resultsNames = require('./data/resultsNames.json');
 var results      = {};
 
 var UI = React.createClass({
@@ -48,6 +48,8 @@ var UI = React.createClass({
         this.setState({
             currentQuestion: 1
         });
+
+        results = {};
     },
 
     render() {
@@ -75,7 +77,12 @@ var UI = React.createClass({
             return 0;
         });
 
-        var resultsNode = <h2>Your result is <u>{resultsNames[ topResults[0] ]}</u></h2>;
+        var resultsNode = (
+            <div>
+                <h2>Your result is <u>{resultsNames[ topResults[0] ]}</u></h2>
+                <div className={'pic-'+topResults[0]} />
+            </div>
+        );
 
         return (
             <div className="UI">
