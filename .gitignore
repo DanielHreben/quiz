@@ -1,0 +1,9 @@
+node_modules
+public/static/js/bower_components
+public/static/build
+etc/selenium.json
+public/static/js/bundle.js
+public/static/build/main.js
+npm-debug.log
+public/static/build/main.js.map
+etc/config.json

@@ -1,0 +1,44 @@
+{
+  "name": "Apixaban_LP",
+  "version": "1.0.3",
+  "description": "Apixaban Leave Piece",
+  "author": {
+    "name": "WebbyLab",
+    "email": "office@webbylab.com",
+    "url": "http://webbylab.com"
+  },
+  "private": true,
+  "scripts": {
+    "build": "webpack -p",
+    "start": "webpack -d --watch --colors",
+    "devserver": "webpack-dev-server --debug --devtool eval-source-map --output-pathinfo --watch --colors --inline --hot --content-base public --port 8090"
+  },
+  "dependencies": {
+    "jquery": "*",
+    "lodash": "*",
+    "pubsub-js": "*",
+    "q": "*",
+    "react": "*",
+    "react-classset": "*"
+  },
+  "devDependencies": {
+    "css-loader": "*",
+    "jshint-loader": "*",
+    "json-loader": "*",
+    "traverse": "*",
+    "jsx-loader": "*",
+    "jsxhint": "*",
+    "less-loader": "*",
+    "react-hot-loader": "*",
+    "style-loader": "*",
+    "traceur-loader": "*",
+    "url-loader": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*",
+    "lodash": "*",
+    "font-awesome": "*",
+    "moment": "*",
+    "numeral": "*",
+    "material-ui": "*"
+  }
+}
