@@ -58,13 +58,13 @@ var UI = React.createClass({
         var question = questions[this.state.currentQuestion];
         var isQuizFinished = this.state.currentQuestion == questions.length-1;
 
-        var answersNode = question.answers.map( (answer,i) => <button onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
+        var answersNode = question.answers.map( (answer,i) => <button className='btn btn-default' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
 
         var questionNode = (
             <div className='question'>
-                <div className='text'>
+                <h2>
                     {question.text}
-                </div>
+                </h2>
                 <div className='answers'>
                     {answersNode}
                 </div>
@@ -80,11 +80,22 @@ var UI = React.createClass({
             if (cars[key] == max) maxObject = key;
         }
 
-        var resultsNode = carName[maxObject];
+        var resultsNode = <h2>Your result is <u>{carName[maxObject]}</u></h2>;
 
         return (
             <div className="UI">
-                {isQuizFinished ? resultsNode : questionNode}
+                <nav className="navbar navbar-default navbar-static-top" role="navigation">
+                    <div className="container">
+                        <div className="navbar-header">
+                            <a className="navbar-brand" href="#">Quiz</a>
+                        </div>
+                    </div>
+                </nav>
+                <div className="container">
+                    <div className="jumbotron">
+                        {isQuizFinished ? resultsNode : questionNode}
+                    </div>
+                </div>
             </div>
         );
     }
