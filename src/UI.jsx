@@ -5,7 +5,6 @@
 'use strict';
 
 var React = require('react');
-var _     = require('lodash');
 
 require('./UI.less');
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css');

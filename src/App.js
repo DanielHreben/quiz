@@ -17,7 +17,7 @@ class App {
         this.ui = this.ui({
             data: {}
         });
-        this.ui = React.renderComponent( this.ui, document.getElementById('content') );
+        this.ui = React.render( this.ui, document.getElementById('content') );
     }
 
     renderUI() {
