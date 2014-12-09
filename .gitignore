@@ -7,3 +7,4 @@ public/static/build/main.js
 npm-debug.log
 public/static/build/main.js.map
 etc/config.json
+*.sublime*

@@ -58,6 +58,7 @@ var UI = React.createClass({
         var answersNode  = '';
         var questionNode = '';
         var resultsNode  = '';
+        var introductionNode = '';
 
         if (isQuizFinished) {
             var topResults = Object.keys(results).sort(function(a, b) {
@@ -69,8 +70,8 @@ var UI = React.createClass({
 
             resultsNode = (
                 <div>
-                    <h2>Your result is <u>{topResultDescriprion.name}</u></h2>
-                    <img src={'static/img/' + topResultDescriprion.img} />
+                    <h2> Ваш оптимальний автомобіль -  <u>{topResultDescriprion.name}</u></h2>
+                    <img src={'static/img/' + topResultDescriprion.img} height="200" />
                 </div>
             );
         } else {
@@ -84,10 +85,17 @@ var UI = React.createClass({
                 </button>
             );
 
+            introductionNode = (
+                <div className='introduction'>
+                    <h2>{question.introduction ? question.introduction : '' }</h2>
+                </div>
+            );
+
             questionNode = (
                 <div className='question'>
+                    {introductionNode}
                     <h2>{this.state.currentQuestion}. {question.text}</h2>
-                    {question.img ? <img src={'static/img/' + question.img} /> : '' }
+                    {question.img ? <img src={'static/img/' + question.img} height="200" /> : '' }
                     {answersNode}
                 </div>
             );

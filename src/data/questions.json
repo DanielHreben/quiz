@@ -1,37 +1,18 @@
 [{
-    "text": "Чи хотіли б Ви, аби у вашої автівки був великий паливний бак",
-    "img": "citroen_x4.png",
-    "answers": [{
-        "text":   "Yeah! I like it!",
-        "points": {
-            "citroen":  20,
-            "hyundai":  10,
-            "skoda":    0
-        }
-    }, {
-        "text": "Sometimes I like shit, sometimes I like bulls",
-        "points": {
-            "citroen":  10,
-            "hyundai":   0,
-            "skoda":    10
-        }
-    }, {
-        "text": "No!",
-        "points": {
-            "citroen":  -5,
-            "hyundai":   0,
-            "skoda":    10
-        }
-    }]
-}, {
-    "text": "Test for correct cut",
+    "introduction": "Оберіть свою бюджетну автівку! Пропонуємо Вам відповісти на кілька запитань, а програма автоматично обере найкращий автомобіль для Вас!",
+    "text": "Дизайн якого з авто Вам найбільше до душі?",
     "answers": [{
         "text": "Citroen C-Elysee",
         "img": "Citroen C-Elysee.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  10,
-            "skoda":    10
+            "citroen":  100,
+            "hyundai":  -10,
+            "skoda":    -10,
+            "renault":  -10,
+            "volkswagen":   -10,
+            "peugeot":  -10,
+            "chevrolet":    -10,
+            "kia":  -10
         }
     }, {
         "text": "Hyundai Accent",
@@ -39,72 +20,246 @@
         "points": {
             "citroen":  0,
             "hyundai":  10,
-            "skoda":    15
+            "skoda":    -10,
+            "renault":  -10,
+            "volkswagen":   -10,
+            "peugeot":  -10,
+            "chevrolet":    -10,
+            "kia":  -10
         }
     }, {
         "text": "Skoda Rapid",
         "img": "Skoda Rapid.png",
         "points": {
-            "citroen":  40,
-            "hyundai":  0,
-            "skoda":    0
+            "citroen":  0,
+            "hyundai":  -10,
+            "skoda":    10,
+            "renault":  -10,
+            "volkswagen":   -10,
+            "peugeot":  -10,
+            "chevrolet":    -10,
+            "kia":  -10
         }
     }, {
         "text": "Renault Logan",
         "img": "Renault Logan.png",
         "points": {
             "citroen":  0,
-            "hyundai":  0,
-            "skoda":    0
+            "hyundai":  -10,
+            "skoda":    -10,
+            "renault":  10,
+            "volkswagen":   -10,
+            "peugeot":  -10,
+            "chevrolet":    -10,
+            "kia":  -10
         }
     }, {
         "text": "Volkswagen Polo",
         "img": "VW Polo.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  0,
-            "skoda":    0
+           "citroen":  0,
+            "hyundai":  -10,
+            "skoda":    -10,
+            "renault":  -10,
+            "volkswagen":   10,
+            "peugeot":  -10,
+            "chevrolet":    -10,
+            "kia":  -10
         }
     }, {
         "text": "Peugeot 301",
         "img": "Peugeot 301.png",
         "points": {
             "citroen":  0,
-            "hyundai":  0,
-            "skoda":    0
+            "hyundai":  -10,
+            "skoda":    -10,
+            "renault":  -10,
+            "volkswagen":   -10,
+            "peugeot":  10,
+            "chevrolet":    -10,
+            "kia":  -10
         }
     }, {
         "text": "Chevrolet Aveo",
         "img": "Chevrolet Aveo.png",
         "points": {
             "citroen":  0,
-            "hyundai":  0,
-            "skoda":    0
+            "hyundai":  -10,
+            "skoda":    -10,
+            "renault":  -10,
+            "volkswagen":   -10,
+            "peugeot":  -10,
+            "chevrolet":    10,
+            "kia":  -10
         }
     }, {
         "text": "KIA Rio",
         "img": "KIA Rio.png",
         "points": {
             "citroen":  0,
-            "hyundai":  0,
-            "skoda":    0
+            "hyundai":  -10,
+            "skoda":    -10,
+            "renault":  -10,
+            "volkswagen":   -10,
+            "peugeot":  -10,
+            "chevrolet":   -10,
+            "kia":  10
         }
     }]
 }, {
-    "text": "How mach 9000+1?",
+    "text": "Чи хотіли б Ви, щоб у Вашої автівки був великий паливний бак?",
+        "answers": [{
+        "text":   "Так",
+        "points": {
+            "citroen":  10,
+            "hyundai":  -20,
+            "skoda":    12,
+            "renault":  10,
+            "volkswagen":   12,
+            "peugeot":  10,
+            "chevrolet":    -10,
+            "kia":  -15
+        }
+    }, {
+        "text": "Ні",
+        "points": {
+           "citroen":  10,
+            "hyundai":  15,
+            "skoda":    -10,
+            "renault":  10,
+            "volkswagen":   -10,
+            "peugeot":  10,
+            "chevrolet":    7,
+            "kia":  15
+        }
+    }, {
+        "text": "Байдуже",
+        "points": {
+            "citroen":  10
+
+        }
+    }]
+}, {
+    "text": "Чи плануєте Ви встановлювати дитяче автокрісло?",
     "answers": [{
-        "text": "9001",
+        "text": "Так",
+        "points": {
+            "citroen":  15,
+            "peugeot":  10
+        }
+    }, {
+        "text": "Ні",
         "points": {
             "citroen":  0,
             "hyundai":  0,
             "skoda":    0
         }
-    }, {
-        "text": "Over 9000!",
+    },
+        {
+        "text": "Важко відповісти",
         "points": {
             "citroen":  0,
-            "hyundai":  10,
+            "hyundai":  0,
             "skoda":    0
         }
+
     }]
-}]
+
+}, {
+    "text": "Ви відчуваєте потребу у великому багажнику?",
+    "answers": [{
+        "text": "Так",
+        "points": {
+            "citroen":  10,
+            "hyundai":  -20,
+            "skoda":    12,
+            "renault":  10,
+            "volkswagen":   -12,
+            "peugeot":  10,
+            "chevrolet":    -5,
+            "kia":  -7
+        }
+    }, {
+        "text": "Ні",
+        "points": {
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
+        }
+    }
+        ]
+
+}, {
+    "text": "Хотіли б Ви мати необмежену пробігом гарантію на автівку?",
+    "answers": [{
+        "text": "Так",
+        "points": {
+            "citroen":  20,
+            "hyundai":  -5,
+            "skoda":    0,
+            "renault":  -5,
+            "volkswagen":   0,
+            "peugeot":  -5,
+            "chevrolet":    -5,
+            "kia":  -5
+        }
+    }, {
+        "text": "Ні",
+        "points": {
+            "citroen":  0,
+            "hyundai":  5,
+            "skoda":    0,
+            "renault":  5,
+            "volkswagen":   0,
+            "peugeot":  5,
+            "chevrolet":    5,
+            "kia":  7
+        }
+    }
+        ]
+        }, {
+    "text": "Наскільки важлива для Вас ціна автомобіля?",
+    "answers": [{
+        "text": "Дуже важлива, ціна - основний фактор вибору",
+        "points": {
+            "citroen":  20,
+            "hyundai":  0,
+            "skoda":    -5,
+            "renault":  5,
+            "volkswagen":   0,
+            "peugeot":  -10,
+            "chevrolet":    -5,
+            "kia":  -10
+        }
+    }, {
+        "text": "Важлива, але маю змогу обрати краще і дорожче",
+        "points": {
+            "citroen":  0,
+            "hyundai":  5,
+            "skoda":    5,
+            "renault":  0,
+            "volkswagen":   5,
+            "peugeot":  5,
+            "chevrolet":    -5,
+            "kia":  5
+        }
+    },
+    {
+        "text": "Не відіграє основну роль у виборі авто",
+        "points": {
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
+        }
+    }
+        ] } ]
