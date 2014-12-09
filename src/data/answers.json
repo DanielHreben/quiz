@@ -1,0 +1,34 @@
+{
+    "citroen": {
+        "name": "Citroen C-Elysee",
+        "img": "Citroen C-Elysee.png"
+    },
+    "hyundai": {
+        "name": "Hyundai Accent",
+        "img": "Hyundai Accent.png"
+    },
+    "skoda": {
+        "name": "Skoda Rapid",
+        "img": "Skoda Rapid.png"
+    },
+    "renault": {
+        "name":  "Renault Logan",
+        "img": "Renault Logan.png"
+    },
+    "volkswagen": {
+        "name": "Volkswagen Polo",
+        "img": "Volkswagen Polo.png"
+    },
+    "peugeot": {
+        "name": "Peugeot 301",
+        "img": "Peugeot 301.png"
+    },
+    "chevrolet": {
+        "name": "Chevrolet Aveo",
+        "img": "Chevrolet Aveo.png"
+    },
+    "kia": {
+        "name": "KIA Rio",
+        "img": "KIA Rio.png"
+    }
+}

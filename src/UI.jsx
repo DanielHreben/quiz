@@ -10,7 +10,7 @@ require('./UI.less');
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
 var questions    = require('./data/questions.json');
-var resultsNames = require('./data/resultsNames.json');
+var answersDescription = require('./data/answers.json');
 var results      = {};
 
 var UI = React.createClass({
@@ -55,34 +55,43 @@ var UI = React.createClass({
     render() {
         var isQuizFinished = this.state.currentQuestion > questions.length;
 
-        var answersNode = '';
+        var answersNode  = '';
         var questionNode = '';
+        var resultsNode  = '';
 
-        if (!isQuizFinished) {
+        if (isQuizFinished) {
+            var topResults = Object.keys(results).sort(function(a, b) {
+                if (results[a] > results[b]) return -1;
+                if (results[a] < results[b]) return 1;
+                return 0;
+            });
+            var topResultDescriprion = answersDescription[ topResults[0] ];
+
+            resultsNode = (
+                <div>
+                    <h2>Your result is <u>{topResultDescriprion.name}</u></h2>
+                    <img src={'static/img/' + topResultDescriprion.img} />
+                </div>
+            );
+        } else {
             var question = questions[this.state.currentQuestion-1];
 
-            answersNode = question.answers.map( (answer,i) => <button className='btn btn-default btn-lg btn-block' onClick={this._answerQuestion.bind(this,i)}>{answer.text}</button>);
+            answersNode = question.answers.map( (answer, i) =>
+                <button className='btn btn-default btn-lg btn-block'
+                onClick={this._answerQuestion.bind(this, i)}>{answer.text}
+                <br />
+                {answer.img ? <img src={'static/img/' + answer.img} height="200" /> : '' }
+                </button>
+            );
 
             questionNode = (
                 <div className='question'>
                     <h2>{this.state.currentQuestion}. {question.text}</h2>
+                    {question.img ? <img src={'static/img/' + question.img} /> : '' }
                     {answersNode}
                 </div>
             );
         }
-
-        var topResults = Object.keys(results).sort(function(a, b) {
-            if (results[a] > results[b]) return -1;
-            if (results[a] < results[b]) return 1;
-            return 0;
-        });
-
-        var resultsNode = (
-            <div>
-                <h2>Your result is <u>{resultsNames[ topResults[0] ]}</u></h2>
-                <img src={'static/img/'+topResults[0]+'.png'} />
-            </div>
-        );
 
         return (
             <div className="UI">

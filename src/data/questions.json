@@ -1,56 +1,93 @@
 [{
-    "text": "Do you like boolshit?",
+    "text": "Чи хотіли б Ви, аби у вашої автівки був великий паливний бак",
+    "img": "citroen_x4.png",
     "answers": [{
         "text":   "Yeah! I like it!",
         "points": {
             "citroen":  20,
             "hyundai":  10,
-            "mercedes": 0
+            "skoda":    0
         }
     }, {
         "text": "Sometimes I like shit, sometimes I like bulls",
         "points": {
             "citroen":  10,
             "hyundai":   0,
-            "mercedes": 10
+            "skoda":    10
         }
     }, {
         "text": "No!",
         "points": {
             "citroen":  -5,
             "hyundai":   0,
-            "mercedes": 10
+            "skoda":    10
         }
     }]
 }, {
-    "text": "How about putin?",
+    "text": "Test for correct cut",
     "answers": [{
-        "text": "Lalalalalalalala!",
+        "text": "Citroen C-Elysee",
+        "img": "Citroen C-Elysee.png",
         "points": {
             "citroen":  0,
-            "hyundai":   10,
-            "mercedes": 10
+            "hyundai":  10,
+            "skoda":    10
         }
     }, {
-        "text": "Huilo!",
+        "text": "Hyundai Accent",
+        "img": "Hyundai Accent.png",
         "points": {
             "citroen":  0,
-            "hyundai":   10,
-            "mercedes": 15
+            "hyundai":  10,
+            "skoda":    15
         }
     }, {
-        "text": "President of the world!",
+        "text": "Skoda Rapid",
+        "img": "Skoda Rapid.png",
         "points": {
             "citroen":  40,
-            "hyundai":   0,
-            "mercedes": 0
+            "hyundai":  0,
+            "skoda":    0
         }
     }, {
-        "text": "WTF?",
+        "text": "Renault Logan",
+        "img": "Renault Logan.png",
         "points": {
             "citroen":  0,
-            "hyundai":   0,
-            "mercedes": 0
+            "hyundai":  0,
+            "skoda":    0
+        }
+    }, {
+        "text": "Volkswagen Polo",
+        "img": "VW Polo.png",
+        "points": {
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0
+        }
+    }, {
+        "text": "Peugeot 301",
+        "img": "Peugeot 301.png",
+        "points": {
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0
+        }
+    }, {
+        "text": "Chevrolet Aveo",
+        "img": "Chevrolet Aveo.png",
+        "points": {
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0
+        }
+    }, {
+        "text": "KIA Rio",
+        "img": "KIA Rio.png",
+        "points": {
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0
         }
     }]
 }, {
@@ -59,15 +96,15 @@
         "text": "9001",
         "points": {
             "citroen":  0,
-            "hyundai":   0,
-            "mercedes": 0
+            "hyundai":  0,
+            "skoda":    0
         }
     }, {
         "text": "Over 9000!",
         "points": {
             "citroen":  0,
-            "hyundai":   10,
-            "mercedes": 0
+            "hyundai":  10,
+            "skoda":    0
         }
     }]
 }]
