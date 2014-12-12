@@ -1,109 +1,109 @@
 [{
-    "introduction": "Оберіть свою бюджетну автівку! Пропонуємо Вам відповісти на кілька запитань, а програма автоматично обере найкращий автомобіль для Вас!",
+    "introduction": "Оберіть свою бюджетну автівку! Пропонуємо Вам відповісти на 6 запитань, а програма автоматично обере найкращий автомобіль для Вас!",
     "text": "Дизайн якого з авто Вам найбільше до душі?",
     "answers": [{
         "text": "Citroen C-Elysee",
         "img": "Citroen C-Elysee.png",
         "points": {
-            "citroen":  100,
-            "hyundai":  -10,
-            "skoda":    -10,
-            "renault":  -10,
-            "volkswagen":   -10,
-            "peugeot":  -10,
-            "chevrolet":    -10,
-            "kia":  -10
+            "citroen":  1,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
         }
     }, {
         "text": "Hyundai Accent",
         "img": "Hyundai Accent.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  10,
-            "skoda":    -10,
-            "renault":  -10,
-            "volkswagen":   -10,
-            "peugeot":  -10,
-            "chevrolet":    -10,
-            "kia":  -10
+              "citroen":  0,
+            "hyundai":  1,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
         }
     }, {
         "text": "Skoda Rapid",
         "img": "Skoda Rapid.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  -10,
-            "skoda":    10,
-            "renault":  -10,
-            "volkswagen":   -10,
-            "peugeot":  -10,
-            "chevrolet":    -10,
-            "kia":  -10
+              "citroen":  0,
+            "hyundai":  0,
+            "skoda":    1,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
         }
     }, {
         "text": "Renault Logan",
         "img": "Renault Logan.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  -10,
-            "skoda":    -10,
-            "renault":  10,
-            "volkswagen":   -10,
-            "peugeot":  -10,
-            "chevrolet":    -10,
-            "kia":  -10
+             "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  1,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
         }
     }, {
         "text": "Volkswagen Polo",
         "img": "VW Polo.png",
         "points": {
-           "citroen":  0,
-            "hyundai":  -10,
-            "skoda":    -10,
-            "renault":  -10,
-            "volkswagen":   10,
-            "peugeot":  -10,
-            "chevrolet":    -10,
-            "kia":  -10
+            "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   1,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  0
         }
     }, {
         "text": "Peugeot 301",
         "img": "Peugeot 301.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  -10,
-            "skoda":    -10,
-            "renault":  -10,
-            "volkswagen":   -10,
-            "peugeot":  10,
-            "chevrolet":    -10,
-            "kia":  -10
+             "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  1,
+            "chevrolet":    0,
+            "kia":  0
         }
     }, {
         "text": "Chevrolet Aveo",
         "img": "Chevrolet Aveo.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  -10,
-            "skoda":    -10,
-            "renault":  -10,
-            "volkswagen":   -10,
-            "peugeot":  -10,
-            "chevrolet":    10,
-            "kia":  -10
+              "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    1,
+            "kia":  0
         }
     }, {
         "text": "KIA Rio",
         "img": "KIA Rio.png",
         "points": {
-            "citroen":  0,
-            "hyundai":  -10,
-            "skoda":    -10,
-            "renault":  -10,
-            "volkswagen":   -10,
-            "peugeot":  -10,
-            "chevrolet":   -10,
-            "kia":  10
+             "citroen":  0,
+            "hyundai":  0,
+            "skoda":    0,
+            "renault":  0,
+            "volkswagen":   0,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  1
         }
     }]
 }, {
@@ -111,31 +111,31 @@
         "answers": [{
         "text":   "Так",
         "points": {
-            "citroen":  10,
-            "hyundai":  -20,
-            "skoda":    12,
-            "renault":  10,
-            "volkswagen":   12,
-            "peugeot":  10,
-            "chevrolet":    -10,
-            "kia":  -15
+            "citroen":  1,
+            "hyundai":  -1,
+            "skoda":    1,
+            "renault":  1,
+            "volkswagen":   1,
+            "peugeot":  1,
+            "chevrolet":    -1,
+            "kia":  -1
         }
     }, {
         "text": "Ні",
         "points": {
-           "citroen":  10,
-            "hyundai":  15,
-            "skoda":    -10,
-            "renault":  10,
-            "volkswagen":   -10,
-            "peugeot":  10,
-            "chevrolet":    7,
-            "kia":  15
+           "citroen":  0,
+            "hyundai":  1,
+            "skoda":    -1,
+            "renault":  0,
+            "volkswagen":   -1,
+            "peugeot":  0,
+            "chevrolet":    0,
+            "kia":  1
         }
     }, {
         "text": "Байдуже",
         "points": {
-            "citroen":  10
+            "citroen":  0
 
         }
     }]
@@ -144,8 +144,8 @@
     "answers": [{
         "text": "Так",
         "points": {
-            "citroen":  15,
-            "peugeot":  10
+            "citroen":  1,
+            "peugeot":  1
         }
     }, {
         "text": "Ні",
@@ -170,14 +170,14 @@
     "answers": [{
         "text": "Так",
         "points": {
-            "citroen":  10,
-            "hyundai":  -20,
-            "skoda":    12,
-            "renault":  10,
-            "volkswagen":   -12,
-            "peugeot":  10,
-            "chevrolet":    -5,
-            "kia":  -7
+            "citroen":  1,
+            "hyundai":  -1,
+            "skoda":    1,
+            "renault":  1,
+            "volkswagen":   -1,
+            "peugeot":  1,
+            "chevrolet":    0,
+            "kia":  -1
         }
     }, {
         "text": "Ні",
@@ -199,26 +199,26 @@
     "answers": [{
         "text": "Так",
         "points": {
-            "citroen":  20,
-            "hyundai":  -5,
+            "citroen":  1,
+            "hyundai":  -1,
             "skoda":    0,
-            "renault":  -5,
+            "renault":  -1,
             "volkswagen":   0,
-            "peugeot":  -5,
-            "chevrolet":    -5,
-            "kia":  -5
+            "peugeot":  -1,
+            "chevrolet":    -1,
+            "kia":  -1
         }
     }, {
         "text": "Ні",
         "points": {
             "citroen":  0,
-            "hyundai":  5,
+            "hyundai":  1,
             "skoda":    0,
-            "renault":  5,
+            "renault":  1,
             "volkswagen":   0,
-            "peugeot":  5,
-            "chevrolet":    5,
-            "kia":  7
+            "peugeot":  1,
+            "chevrolet":    1,
+            "kia":  1
         }
     }
         ]
@@ -227,26 +227,26 @@
     "answers": [{
         "text": "Дуже важлива, ціна - основний фактор вибору",
         "points": {
-            "citroen":  20,
+            "citroen":  2,
             "hyundai":  0,
-            "skoda":    -5,
-            "renault":  5,
+            "skoda":    -1,
+            "renault":  1,
             "volkswagen":   0,
-            "peugeot":  -10,
-            "chevrolet":    -5,
-            "kia":  -10
+            "peugeot":  -1,
+            "chevrolet":    -1,
+            "kia":  -1
         }
     }, {
         "text": "Важлива, але маю змогу обрати краще і дорожче",
         "points": {
-            "citroen":  0,
-            "hyundai":  5,
-            "skoda":    5,
+            "citroen":  1,
+            "hyundai":  1,
+            "skoda":    1,
             "renault":  0,
-            "volkswagen":   5,
-            "peugeot":  5,
-            "chevrolet":    -5,
-            "kia":  5
+            "volkswagen":   1,
+            "peugeot":  1,
+            "chevrolet":    0,
+            "kia":  1
         }
     },
     {
